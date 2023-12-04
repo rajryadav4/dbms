@@ -1,0 +1,372 @@
+1)
+CREATE TABLE Employee ( EMPID int PRIMARY KEY, FirstName varchar (255),
+LastName varchar (255), Email varchar (255) UNIQUE);
+
+desc Employee
+ALTER TABLE Employee RENAME to Emp
+
+desc Emp
+
+Insert all
+into Emp values (10, 'Raksha', 'Alva',
+'alvaraksha222@gmail.com')
+into Emp values (11, 'Sanjana', 'Ithule', 'sanjana14@gmail.com') into Emp values (12, 'Mrugakshi', 'Patil', 'Mrugakshi@gmail.com') into Emp values (13, 'Gauravi', 'Patil', 'gauravipatil25@gmail.com')
+SELECT * FROM Dual
+SELECT * FROM Emp
+
+
+
+
+
+
+
+
+
+2)
+CREATE TABLE Customer (CID int, CNAME varchar (255), City varchar (255), Country varchar (255))
+Insert all
+into Customer values ('111', 'Klaus', 'Paris', 'France')
+into Customer values ('112', 'Caroline', 'Berlin', 'Germany')
+into Customer values ('113', 'Damon', 'Tokyo','Japan')
+into Customer values ('114', 'Elena', 'Berlin', 'Germany')
+SELECT * FROM Dual
+SELECT * FROM Customer
+
+
+
+
+
+
+
+
+
+
+
+
+
+3)
+CREATE TABLE Customer (CID int, CNAME varchar (255), City varchar (255), Country varchar (255))
+Insert all
+into Customer values ('111', 'Klaus', 'Paris', 'France')
+into Customer values (112', 'Caroline', 'Berlin', 'Germany')
+into Customer values ('113', 'Damon', 'Tokyo', 'Japan')
+into Customer values ('114', 'Elena', 'Berlin', 'Germany')
+SELECT * FROM Dual
+SELECT * FROM Customer
+SELECT City, count (CID) City FROM Customer GROUP BY City
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4)CREATE TABLE Customer (CID int, CNAME varchar (255), City varchar (255), Country varchar (255)) Insert all
+into Customer values ('111', 'Klaus', 'Paris', 'France')
+into Customer values ('112', 'Caroline', 'Berlin', 'Germany')
+into Customer values ('113', 'Damon', 'Tokyo', 'Japan')
+into Customer values (114', 'Elena', 'Berlin', 'Germany') SELECT * FROM Dual
+SELECT * FROM Customer
+SELECT City, count (CID) City FROM Customer GROUP BY City
+SELECT City, count (CID) City FROM Customer GROUP BY City HAVING count (CID)=2
+
+
+
+
+
+5)
+CREATE TABLE Customer (CID int, CNAME varchar (255), City varchar (255), Country varchar (255)) Insert all
+into Customer values ('111', 'Klaus', 'Paris', 'France')
+into Customer values ('112', 'Caroline', 'Berlin', 'Germany')
+into Customer values ('113', 'Damon', 'Tokyo', 'Japan')
+into Customer values (114', 'Elena', 'Berlin', 'Germany') SELECT * FROM Dual
+SELECT * FROM Customer
+SELECT City, count (CID) City FROM Customer GROUP BY City
+SELECT City, count (CID) City FROM Customer GROUP BY City HAVING count (CID)=2 SELECT UPPER ('Klaus') FROM dual
+
+
+
+6)
+CREATE TABLE Student (ID int, Name varchar (255)) Insert all
+into Student values ('1', 'Disha')
+into Student values ('2', 'Vedika') into Student values ('3', 'Janhvi')
+SELECT * FROM Dual
+SELECT * FROM Student
+CREATE TABLE Course (ID int, Name varchar (255)) Insert all
+into Course values ('3', 'Janhvi')
+into Course values ('4', 'Prerna') into Course values ('5', 'Mrunal') SELECT * FROM Dual
+SELECT * FROM Course
+SELECT * FROM Student UNION SELECT * FROM Course
+
+
+
+
+
+7)
+CREATE TABLE Student (ID int, Name varchar (255)) Insert all
+into Student values ('1', 'Disha')
+into Student values ('2', 'Vedika') into Student values ('3', 'Janhvi')
+SELECT * FROM Dual
+SELECT * FROM Student
+CREATE TABLE Course (ID int, Name varchar (255)) Insert all
+into Course values ('3', 'Janhvi')
+into Course values ('4', 'Prerna') into Course values ('5', 'Mrunal') SELECT * FROM Dual
+SELECT * FROM Course
+SELECT * FROM Student UNION SELECT * FROM Course SELECT * FROM Student UNION ALL SELECT * FROM Course
+
+
+8)
+CREATE TABLE Student (ID int, Name varchar (255)) Insert all
+into Student values ('1', 'Disha')
+into Student values ('2', 'Vedika') into Student values ('3', 'Janhvi') SELECT * FROM Dual
+SELECT * FROM Student
+CREATE TABLE Course (ID int, Name varchar (255)) Insert all
+into Course values ('3', 'Janhvi')
+into Course values ('4', 'Prerna') into Course values ('5', 'Mrunal') SELECT * FROM Dual
+SELECT * FROM Course
+SELECT * FROM Student UNION SELECT * FROM Course SELECT * FROM Student UNION ALL SELECT * FROM Course SELECT * FROM Student INTERSECT SELECT * FROM Coursel
+
+
+
+
+
+9)
+CREATE TABLE Student (ID int, Name varchar (255)) Insert all
+into Student values ('1', 'Disha')
+into Student values ('2', 'Vedika') into Student values ('3', 'Janhvi')
+SELECT * FROM Dual
+SELECT * FROM Student
+CREATE TABLE Course (ID int, Name varchar (255)) Insert all
+into Course values ('3', 'Janhvi') into Course values ('4', 'Prerna') into Course values ('5', 'Mrunal') SELECT * FROM Dual
+SELECT * FROM Course
+SELECT * FROM Student UNION SELECT * FROM Course SELECT * FROM Student UNION ALL SELECT * FROM Course SELECT * FROM Student INTERSECT SELECT * FROM Course SELECT * FROM Student MINUS SELECT * FROM Course
+
+
+
+10)
+CREATE TABLE Student (ID int, Name varchar (255)) Insert all
+into Student values ('1', 'Disha')
+into Student values ('2', 'Vedika') into Student values ('3', 'Janhvi') SELECT * FROM Dual
+SELECT * FROM Student
+CREATE TABLE Course (ID int, Name varchar (255)) Insert all
+into Course values ('3', 'Janhvi')
+into Course values ('4', 'Prerna') into Course values ('5', 'Mrunal') SELECT * FROM Dual
+SELECT * FROM Course
+SELECT * FROM Student UNION SELECT * FROM Course
+SELECT * FROM Student UNION ALL SELECT * FROM Course
+SELECT * FROM Student INTERSECT SELECT * FROM Course
+SELECT * FROM Student MINUS SELECT * FROM Course
+SELECT * FROM Student INNER JOIN Course ON Student. ID=Course. ID
+
+11)
+CREATE TABLE Student (ID int, Name varchar (255)) Insert all
+into Student values ('1', 'Disha')
+into Student values ('2', 'Vedika')
+into Student values ('3', 'Janhvi') SELECT * FROM Dual
+SELECT * FROM Student
+CREATE TABLE Course (ID int, Name varchar (255)) Insert all
+into Course values ('3', 'Janhvi')
+into Course values ('4', 'Prerna') into Course values ('5', 'Mrunal')
+SELECT * FROM Dual
+SELECT * FROM Course
+SELECT * FROM Student UNION SELECT * FROM Course
+SELECT * FROM Student UNION ALL SELECT * FROM Course SELECT * FROM Student INTERSECT SELECT * FROM Course SELECT * FROM Student MINUS SELECT * FROM Course
+SELECT * FROM Student INNER JOIN Course ON Student. ID=Course. ID SELECT * FROM Student LEFT OUTER JOIN Course ON Student. ID=Course. ID
+
+
+
+12)
+CREATE TABLE Student (ID int, Name varchar (255)) Insert all
+into Student values ('1', 'Disha')
+into Student values ('2', 'Vedika') into Student values ('3', 'Janhvi') SELECT * FROM Dual
+SELECT * FROM Student
+CREATE TABLE Course (ID int, Name varchar (255)) Insert all
+into Course values ('3', 'Janhvi') into Course values ('4', 'Prerna')
+into Course values ('5', 'Mrunal') SELECT * FROM Dual
+SELECT * FROM Course
+SELECT * FROM Student UNION SELECT * FROM Course SELECT
+FROM Student UNION ALL SELECT * FROM Course SELECT * FROM Student INTERSECT SELECT * FROM Course SELECT * FROM Student MINUS SELECT * FROM Course
+SELECT * FROM Student INNER JOIN Course ON Student. ID=Course. ID SELECT * FROM Student LEFT OUTER JOIN Course ON Student. ID=Course. ID SELECT * FROM Student RIGHT OUTER JOIN Course ON Student. ID=Course. ID
+
+
+13)
+CREATE TABLE Student (ID int, Name varchar (255)) Insert all
+into Student values ('1', 'Disha')
+into Student values ('2', 'Vedika') into Student values ('3', 'Janhvi') SELECT * FROM Dual
+SELECT * FROM Student
+CREATE TABLE Course (ID int, Name varchar (255)) Insert all
+into Course values ('3', 'Janhvi') into Course values ('4', 'Prerna') into Course values ('5', 'Mrunal') SELECT * FROM Dual
+SELECT * FROM Course
+SELECT * FROM Student UNION SELECT * FROM Course SELECT * FROM Student UNION ALL SELECT * FROM Course SELECT * FROM Student INTERSECT SELECT * FROM Course SELECT * FROM Student MINUS SELECT * FROM Course SELECT * FROM Student INNER JOIN Course ON Student. ID=Course. ID
+SELECT * FROM Student LEFT OUTER JOIN Course ON Student. ID=Course. ID SELECT * FROM…
+
+
+
+
+
+
+
+
+
+14)
+CREATE OR REPLACE PROCEDURE findMin(x IN number, y IN number, z OUT number) IS
+BEGIN
+IF x < y THEN
+Z:= x;
+ELSE
+Z:= y₂
+END IF;
+END findMin;
+
+DECLARE
+a number;
+b number;
+c number: BEGIN
+a := 12;
+b := 40;
+findMin(a, b, c);
+dbms output put line(' Minimum of (12, 40): ' || c);
+END;
+
+
+15)
+CREATE OR REPLACE FUNCTION findMax(x IN number, y IN number) RETURN number
+IS
+z number:
+BEGIN
+IF x > y THEN
+Z:= X;
+ELSE
+Z:= y;
+END IF:
+RETURN Z; 
+END;
+
+DECLARE
+a number:
+b number:
+c number; BEGIN
+a: = 12;
+b:= 40;
+c:= findMax (a, b)i
+dbms output put line(' Maximum of (12, 40): ' || c);
+END;
+
+
+
+
+
+16)
+CREATE OR REPLACE TRIGGER emp trigg before update on Emp BEGIN
+dbms output.put line('record updated');
+END;
+update Emp set FirstName='Disha' where EMPID=11
+[8:56 pm, 28/11/2023] Sahilya Bailya👽: CREATE OR REPLACE TRIGGER emp trigg before update on Emp BEGIN
+dbms output.put line('record updated');
+END;
+update Emp set FirstName='Disha' where EMPID=11 SELECT * FROM Emp
+
+
+17)
+CREATE TABLE Customers (ID int, Name varchar (255), Age varchar (255), Salary int) Insert all
+into Customers values (1, 'Ava', '22', 3000)
+into Customers values (2, into Customers values (3, into Customers values (4, into Customers values (5,
+'Alex', '32', 1200) 'Bridget', '25', 3000) 'Rhys', '36', 6500) 'Jules', '21', 8000)
+into Customers values (6, 'Josh', '27', 4500) SELECT * FROM Dual
+SELECT * FROM Customers
+
+
+
+
+
+
+18)CREATE TABLE Customers (ID int, Name varchar (255), Age varchar (255), Salary int)
+Insert all
+into Customers values (1, 'Ava', '22', 3000)
+into Customers values (2, 'Rhys', '36', 6500)
+ into Customers values (3, 'Alex', '32', 1200)
+into Customers values (4, 'Jules', '21', 8000)
+into Customers values (5,'Bridget', '25', 3000) 
+into Customers values (6, 'Josh', '27', 4500) 
+SELECT * FROM Dual
+SELECT * FROM Customers
+
+
+
+
+
+
+
+
+
+19)CREATE TABLE Customers (ID int, Name varchar (255), Age varchar (255), Salary int) Insert all
+into Customers values (1, 'Ava', '22', 3000)
+into Customers values (2, 'Alex', '32', 1200) into Customers values (3, 'Bridget', '25', 3000) into Customers values (4, 'Rhys', '36', 6500) into Customers values (5, 'Jules', '21', 8000)
+into Customers values (6, 'Josh', '27', 4500) SELECT * FROM Dual
+SELECT * FROM Customers
+
+DECLARE
+total_rows number;
+BEGIN
+UPDATE Customers
+SET Salary = Salary + 500;
+total_rows := SQL%ROWCOUNT;
+IF total rows = 0 THEN
+dbms output put line('No customers selected');
+ELSE
+dbms output.put line (total rows || customers selected');
+END IF;
+END;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20)
+CREATE TABLE Custom (ID int, Name varchar (255), Age varchar (255), Salary int) 
+Insert all
+into Custom values (1, 'Avej', '22', 3000)
+into Custom values (2, 'Alam', '32', 1200) 
+into Custom values (3, 'Briju', '25', 3000) 
+into Custom values (4, 'Rus', '36', 6500) 
+into Custom values (5, 'Julie', '21', 8000)
+into Custom values (6, 'Jonu', '27', 4500)
+SELECT * FROM Dual
+SELECT * FROM Custom
+
+DECLARE
+total_rows number(2);
+BEGIN
+UPDATE Custom
+SET Salary = Salary + 500;
+total_rows := SQL%ROWCOUNT;
+IF total_rows = 0 THEN
+dbms_output.put_line('No customers selected');
+ELSE
+dbms_output.put_line (total_rows || 'customers selected');
+END IF;
+END;
